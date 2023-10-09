@@ -45,6 +45,8 @@ def setupMenu():
 # Function for obtaining user input on what operation to perform
 def getOperation():
     
+    while True:
+        
     try:
         userInput = int(input("Enter the number for the operation you would like to perform:"))
 
@@ -62,12 +64,10 @@ def getOperation():
     except:
 
         print("Please enter a valid number\n")
-        getOperation()
 
 # Function for obtaining the two numbers to perform the operation on
 
 def getNumbers():
-    
     while True:
         
         try:
