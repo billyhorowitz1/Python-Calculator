@@ -11,8 +11,27 @@ def main():
     setupMenu()
 
     # Find out what operation the user requested
-    getOperation()
+    requestedOperation = getOperation()
 
+    # Request and store numbers entered from user
+    numbersEntered = getNumbers()
+
+    # Perform the requested operation
+    if requestedOperation == "Add":
+
+        print(f"{numbersEntered[0]} + {numbersEntered[1]} is equal to {numbersEntered[0] + numbersEntered[1]}")
+    
+    elif requestedOperation == "Subtract":
+
+        print(f"{numbersEntered[0]} - {numbersEntered[1]} is equal to {numbersEntered[0] - numbersEntered[1]}")
+
+    elif requestedOperation == "Multiply":
+
+        print(f"{numbersEntered[0]} * {numbersEntered[1]} is equal to {numbersEntered[0] * numbersEntered[1]}")
+    
+    elif requestedOperation == "Divide":
+
+        print(f"{numbersEntered[0]} / {numbersEntered[1]} is equal to {numbersEntered[0] / numbersEntered[1]}")
 
     
 
@@ -42,9 +61,24 @@ def getOperation():
 
     except:
 
-        print("Please enter a number")
+        print("Please enter a valid number\n")
+        getOperation()
 
+# Function for obtaining the two numbers to perform the operation on
 
+def getNumbers():
+    
+    while True:
+        
+        try:
+            
+            num1 = float(input("Enter the first number: "))
+            num2 = float(input("Enter the second number: "))
+            return [num1, num2]
+            
+        except ValueError:
+            
+            print("Please enter valid numbers.")
  
 # Call main function
 if __name__ == "__main__":
