@@ -47,23 +47,23 @@ def getOperation():
     
     while True:
         
-    try:
-        userInput = int(input("Enter the number for the operation you would like to perform:"))
+        try:
+            userInput = int(input("Enter the number for the operation you would like to perform:"))
 
-        if userInput == 1:
-            return "Add"
-        elif userInput == 2:
-            return "Subtract"
-        elif userInput == 3:
-            return "Multiply"
-        elif userInput == 4:
-            return "Divide"
-        else:
-            print("Please enter a number between 1 and 4")
+            if userInput == 1:
+                return "Add"
+            elif userInput == 2:
+                return "Subtract"
+            elif userInput == 3:
+                return "Multiply"
+            elif userInput == 4:
+                return "Divide"
+            else:
+                print("Please enter a number between 1 and 4")
 
-    except:
+        except:
 
-        print("Please enter a valid number\n")
+            print("Please enter a valid number\n")
 
 # Function for obtaining the two numbers to perform the operation on
 
